@@ -8,7 +8,7 @@ It's not optimized in any way and is purely for reference only.
 
 License
 =======
-> Copyright (c) 2010-2013 Matthias Richter  
+> Copyright (c) 2013 Richard Bamford
 >  
 > Permission is hereby granted, free of charge, to any person obtaining a copy  
 > of this software and associated documentation files (the "Software"), to deal  
