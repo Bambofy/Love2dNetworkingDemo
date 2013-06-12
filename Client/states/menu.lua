@@ -28,7 +28,3 @@ function love.keypressed( key )
 		end
 	end
 end
-
-function love.mousepressed( x, y, key )
-	playing( input, 1,1,1, 'hello')
-end

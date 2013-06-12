@@ -18,16 +18,24 @@ function onConnect(id)
 end
 
 function onReceive(data, id)
+	if string.find(data, "name") then
+		local player_name = string.sub(data, "5")
+		players[id].name = player_name
+	end
+
+	local speed = 1
+	if players[id].name == "bambo" and data == "left" then speed = 1.1 end
+
 	if data == 'left' then
-		player_bodys[id]:move( -1, 0 )
+		player_bodys[id]:move( -speed, 0 )
 	elseif data == 'right' then
-		player_bodys[id]:move( 1, 0 )
+		player_bodys[id]:move( speed, 0 )
 	end
 
 	if data == 'up' then
-		player_bodys[id]:move( 0, -1 )
+		player_bodys[id]:move( 0, -speed )
 	elseif data == 'down' then
-		player_bodys[id]:move( 0, 1 )
+		player_bodys[id]:move( 0, speed )
 	end
 
 	if data == 'quit' then
